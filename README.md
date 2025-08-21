@@ -26,3 +26,16 @@ The goal is not only to predict customer churn but also to generate actionable i
 * Data Visualizations:
  * Churn rate comparison across categories (contract type, internet service, etc.).
  * Distribution plots and bar charts to highlight churn trends.
+---
+# 🛠️ Tools & Technologies
+* Programming Language: Python
+* Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+* Environment: Jupyter Notebook
+---
+* 📂 Repository Structure
+`
+📁 Churn-Analysis
+│── 📄 Churn_Analysis.ipynb      # Jupyter notebook with full analysis
+│── 📊 images/                   # Visualizations (churn by city, heatmaps, etc.)
+│── 📄 README.md                 # Project documentation (this file)
+`
