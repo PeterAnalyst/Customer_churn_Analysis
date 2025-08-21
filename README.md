@@ -33,6 +33,7 @@ The goal is not only to predict customer churn but also to generate actionable i
 * Environment: Jupyter Notebook
 ---
 * 📂 Repository Structure
+  
 `
 📁 Churn-Analysis
 │── 📄 Churn_Analysis.ipynb      # Jupyter notebook with full analysis
