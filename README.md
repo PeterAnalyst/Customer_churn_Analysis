@@ -1,3 +1,4 @@
+![](images/decision_confusion.PNG)
 # 🌀 Customer Churn Analysis with Machine Learning
 ---
 ## 📌 Project Overview
@@ -53,7 +54,30 @@ Customer churn (the loss of clients or subscribers) is one of the most critical 
 │   ├── correlation_heatmap.png  
 │   ├── tenure_segmentation.png  
 │   ├── decision_tree_importance.png  
-│   └── [Any extra plots you want to add]  
+│   ├──  Decision.PNG
+│   ├── churn_by_city.PNG
+│   ├── churn_by_city_hover.PNG
+│   ├── churn_by_contract.PNG
+│   ├── churn_by_partner.PNG
+│   ├── churn_count_for_DSL_internet_service.PNG
+│   ├── churn_count_for_fiber_optic_service.PNG
+│   ├── churn_count_for_internet_service.PNG
+│   ├── churn_count_for_no_internet_service.PNG
+│   ├── churn_count_for_online_security.PNG
+│   ├── churn_count_for_tech_support.PNG
+│   ├── churn_count_payment_method.PNG
+│   ├── churn_distribution_by_dependents.PNG
+│   ├── churn_rate_gender.PNG
+│   ├── churn_rate_not_senior_citizen_status.PNG
+│   ├── churn_rate_reason.PNG
+│   ├── churn_rate_senior_citizen_status.PNG
+│   ├── churn_reason_count_dependents.PNG
+│   ├── churn_reason_count_not_dependents.PNG
+│   ├── churn_reason_count_partner.PNG
+│   ├── churn_reason_not_senior_citizen_status.PNG
+│   ├── churn_reason_senior.PNG
+│   ├── correlation_heatmap.PNG
+│   └──  decision_confusion.PNG
 │
 ├── scripts/                # Python scripts for reusable functions  
 │   ├── data_preprocessing.py  
@@ -113,8 +137,7 @@ All plots are saved in the visuals/ folder:
 * 📊 Churn by Payment Method
 * 📊 Churn by customer life time value
 * 📊 Correlation heatmap to check feature relationship
-* 🔥 correlation_heatmap.png
-* 🌳 decision_tree_importance.png
+* ![🔥 correlation_heatmap.png](images/correlation_heatmap.PNG)
 
 4. Machine Learning Model
 
