@@ -8,7 +8,7 @@ Customer churn (the loss of clients or subscribers) is one of the most critical 
 ### Key goals:
 * Understand patterns behind customer churn
 * Visualize important metrics (e.g., churn by city, contract type, tenure).
-* Build an interpretable predictive model.
+* Predict churn using interpretable models and Building an interpretable predictive model.
 * Provide business recommendations to reduce churn.
 ---
 
@@ -89,104 +89,60 @@ Customer churn (the loss of clients or subscribers) is one of the most critical 
 ```
 ---
 ## 🔍 Analysis Highlights
-1. Data Cleaning & Preprocessing
- * Removed duplicates, missing values, and irrelevant columns.
- * Encoded categorical variables.
- * Created new features like tenure bins for segmentation.
- * [Optional: Add your own data wrangling idea here]
+### 1. Data Cleaning & Preprocessing
+- Removed duplicates, missing values, and irrelevant columns
+- Encoded categorical variables for machine learning
+- Engineered new features such as **tenure bins** for segmentation
 
-2. Exploratory Data Analysis (EDA)
-Key breakdowns include:
-* Churn by city
-* Churn by contract type
-* Churn by charge
-* Churn across tenure groups
-* Churn by gender
-* Churn by reason
-* Churn by age group (Senoir/Not Senoir Citizen)
-* Churn by Partner/No Partner
-* Churn by Dependent/No Dependent
-* Churn by service used
-* Churn by Tech Support
-* Churn by Online Security
-* Churn by Payment Method
-* Churn by customer life time value
-* Correlation heatmap to check feature relationships
+### 2. Exploratory Data Analysis (EDA)
+Analyzed churn patterns across multiple dimensions:
+- **Contract Type**: Month-to-month customers churn the most
+- **Tenure Groups**: Short-tenure customers are high-risk
+- **Charges**: Higher charges show correlation with churn
+- **Demographics**: Gender, Partner, Dependents
+- **Services**: Tech Support, Online Security
+- **Payment Method**: Electronic check users churn more
+- **Customer Lifetime Value (CLV)**
+- **Correlation Heatmap** for feature relationships
 
-3. Visualizations
-All plots are saved in the visuals/ folder:
-* 📊 churn_by_city.png
-* 📊 churn_by_contract.png
-* 📊 tenure_segmentation.png
-* 📊 Churn by reason
-* 📊 Churn by age group (Senoir/Not Senoir Citizen)
-* 📊 Churn by Partner/No Partner
-* 📊 Churn by Dependent/No Dependent
-* 📊 Churn by service used
-* 📊 Churn by Tech Support
-* 📊 Churn by Online Security
-* 📊 Churn by Payment Method
-* 📊 Churn by customer life time value
-* 📊 Correlation heatmap to check feature relationshipChurn by reason
-* 📊 Churn by age group (Senoir/Not Senoir Citizen)
-* 📊 Churn by Partner/No Partner
-* 📊 Churn by Dependent/No Dependent
-* 📊 Churn by service used
-* 📊 Churn by Tech Support
-* 📊 Churn by Online Security
-* 📊 Churn by Payment Method
-* 📊 Churn by customer life time value
-* 📊 Correlation heatmap to check feature relationship
-* ![🔥 correlation_heatmap.png](images/correlation_heatmap.PNG)
+### 3. Visualizations
+Key plots saved in `/images/`:
+- Churn distribution by contract, tenure, age, and city
+- Churn by partner/dependent status
+- Service usage vs. churn (Online Security, Tech Support, etc.)
+- Payment method vs. churn
+- Feature correlation heatmap
+- Model feature importance ranking
 
-4. Machine Learning Model
+### 4. Machine Learning Model
+- **Model**: Decision Tree Classifier  
+- **Metrics**: Accuracy = 77%, with Precision, Recall, and F1-score  
+- **Evaluation**: Confusion Matrix and Feature Importance plots
 
-Model: Decision Tree Classifier
+### 5. Business Insights
+- Month-to-month contract customers are most likely to churn  
+- Customers without online security or tech support show higher churn rates  
+- Short-tenure customers are a high-risk segment  
+- Certain payment methods (e.g., electronic checks) are linked to higher churn  
 
-Performance evaluated with: Accuracy, Precision, Recall, F1-score, Confusion Matrix
-
-Feature importance visualized using decision tree feature ranking
-
-5. Business Insights
-
-Customers on month-to-month contracts are more likely to churn.
-
-Short-tenure customers have higher churn rates.
-
-Certain cities show above-average churn.
-
+---
 Key factors driving churn: Contract type, tenure, internet service, payment method.
+![](images/Decision.PNG)
 ## 📈 Results & Insights
 * Customers on month-to-month contracts showed the highest churn rate.
 * Electronic check payments were strongly associated with churn compared to automatic bank transfers or credit card payments.
 * Tenure plays a big role: customers with shorter tenures are more likely to churn.
 * Logistic Regression achieved a good baseline accuracy, while decision tree analysis revealed the most influential features.
 ---
- # 🚀 How to Run the Project
-
-1. Clone the repository:
+ ## How to Run the Project
 ```
-git clone https://github.com/your-username/Churn-Analysis.git
-cd Churn-Analysis
-```
-
-2. Install dependencies:
-```
+git clone https://github.com/PeterAnalyst/Customer_churn_Analysis.git
+cd Customer_churn_Analysis
 pip install -r requirements.txt
-```
-
-3. Open the Jupyter notebook:
-```
 jupyter notebook Churn_Analysis.ipynb
 ```
----
-✨ Future Work
-
-Test ensemble methods (Random Forest, XGBoost).
-
-Add customer lifetime value analysis.
-
-Deploy churn prediction model as a web app (Flask/Streamlit).
+or open it in Google Colab for an interactive experience.
+ 
 ---
 # 👤 Author
 👋 Hi, I'm Peter Junior Nwachineke – a passionate Data Analyst with hands-on experience in SQL, Power BI, Excel, and Python. I'm currently pursuing an MBA in International Business Management at ISTEC and building data projects that turn raw information into actionable insights. I'm especially interested in process automation, dashboard reporting, and helping businesses make smarter, data-driven decisions.
