@@ -1,8 +1,9 @@
 # 🌀 Customer Churn Analysis with Machine Learning
-### 📌 Project Overview
+---
+## 📌 Project Overview
 
 Customer churn (the loss of clients or subscribers) is one of the most critical challenges businesses face. This project analyzes a telecom dataset to identify patterns and factors that contribute to customer churn. The analysis includes data cleaning, feature engineering, exploratory analysis, visualizations, and a machine learning model for churn prediction. Using Python, Pandas, Matplotlib, Seaborn, and Scikit-learn.
-
+---
 ### Key goals:
 * Understand patterns behind customer churn
 * Visualize important metrics (e.g., churn by city, contract type, tenure).
@@ -10,7 +11,7 @@ Customer churn (the loss of clients or subscribers) is one of the most critical 
 * Provide business recommendations to reduce churn.
 ---
 
-#🔑 Key Features
+## 🔑 Key Features
 
 *Exploratory Data Analysis (EDA):
   * Visualized churn by contract type, tenure, and payment methods.
@@ -31,12 +32,12 @@ Customer churn (the loss of clients or subscribers) is one of the most critical 
  * Churn rate comparison across categories (contract type, internet service, etc.).
  * Distribution plots and bar charts to highlight churn trends.
 ---
-# 🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 * Programming Language: Python
 * Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
 * Environment: Jupyter Notebook
 ---
-📂 Repository Structure
+## 📂 Repository Structure
   
 ```
 📁 Churn-Analysis
@@ -63,7 +64,7 @@ Customer churn (the loss of clients or subscribers) is one of the most critical 
 └── requirements.txt  
 ```
 ---
-# 🔍 Analysis Highlights
+## 🔍 Analysis Highlights
 1. Data Cleaning & Preprocessing
  * Removed duplicates, missing values, and irrelevant columns.
  * Encoded categorical variables.
@@ -132,7 +133,7 @@ Short-tenure customers have higher churn rates.
 Certain cities show above-average churn.
 
 Key factors driving churn: Contract type, tenure, internet service, payment method.
-# 📈 Results & Insights
+## 📈 Results & Insights
 * Customers on month-to-month contracts showed the highest churn rate.
 * Electronic check payments were strongly associated with churn compared to automatic bank transfers or credit card payments.
 * Tenure plays a big role: customers with shorter tenures are more likely to churn.
