@@ -1,8 +1,8 @@
 # 🌀 Customer Churn Analysis with Machine Learning
 ---
 ## 📌 Project Overview
-
 Customer churn (the loss of clients or subscribers) is one of the most critical challenges businesses face. This project analyzes a telecom dataset to identify patterns and factors that contribute to customer churn. The analysis includes data cleaning, feature engineering, exploratory analysis, visualizations, and a machine learning model for churn prediction. Using Python, Pandas, Matplotlib, Seaborn, and Scikit-learn.
+
 ---
 ### Key goals:
 * Understand patterns behind customer churn
