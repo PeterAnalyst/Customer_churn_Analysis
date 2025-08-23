@@ -2,108 +2,96 @@
 # 🌀 Customer Churn Analysis with Machine Learning
 ---
 ## 📌 Project Overview
-Customer churn (the loss of clients or subscribers) is one of the most critical challenges businesses face. This project analyzes a telecom dataset to identify patterns and factors that contribute to customer churn. The analysis includes data cleaning, feature engineering, exploratory analysis, visualizations, and a machine learning model for churn prediction. Using Python, Pandas, Matplotlib, Seaborn, and Scikit-learn.
+Customer churn (the loss of clients or subscribers) is one of the most critical challenges businesses face. This project analyzes a telecom dataset to identify patterns and factors that contribute to customer churn. The workflow includes:
+  * **Data cleaning** & feature engineering
+  * **Exploratory Data Analysis (EDA)** to uncover churn drivers
+  * **Interactive visualizations** to communicate insights
+  * **A predictive Decision Tree model** with performance evaluation
+  * **Business recommendations** to reduce churn
 
+#### Tools: Python, Pandas, Matplotlib, Seaborn, Scikit-learn, Plotly
 ---
-### Key goals:
-* Understand patterns behind customer churn
-* Visualize important metrics (e.g., churn by city, contract type, tenure).
-* Predict churn using interpretable models and Building an interpretable predictive model.
-* Provide business recommendations to reduce churn.
+## 🎯 Key Goals
+  * Understand patterns behind customer churn
+  * Visualize churn across demographics, services, contract types, and payment methods
+  * Predict churn with an interpretable machine learning model
+  * Translate findings into **actionable business recommendations**
 ---
-
+## 🔎 Executive Summary
+  * Exploratory analysis shows higher churn among **month-to-month, low-tenure**, and **non-bundled** customers; **Electronic Check** users also churn more.
+  * A baseline **Decision Tree** model achieves **77% accuracy** and highlights **Contract Type, online_security** and **Tenure** as the most important features.
+  * Recommended actions: **early-life onboarding, contract-migration offers, service bundling, payment-method nudges**, and **risk-based outreach.**
+---
 ## 🔑 Key Features
+**Exploratory Data Analysis (EDA):**
+  * Visualized churn by contract type, tenure, payment method, services, and demographics
+  * Correlation heatmaps to understand feature relationships
+  * Segmentation of customers by tenure and contract type
 
-*Exploratory Data Analysis (EDA):
-  * Visualized churn by contract type, tenure, and payment methods.
-  * Correlation heatmaps to understand feature relationships.
-  * Segmentation of customers by tenure and contract type.
+**Feature Engineering:**
+  * Created **tenure bins** for segmentation
+  * Encoded categorical variables
+  * Handled missing values
 
-* Feature Engineering:
-  * Created tenure bins for segmentation.
-  * Encoded categorical variables.
-  * Handled missing values and scaled numeric features.
+**Machine Learning Model:**
+  * Decision Tree Classifier for churn prediction
+  * Evaluation using Confusion Matrix, Accuracy, Precision, Recall, and F1-score
+  * Feature importance ranking to interpret churn drivers
 
-* Machine Learning Models:
-  * Logistic Regression for churn prediction.
-  * Feature importance analysis using Decision Trees.
-  * Evaluation with Confusion Matrix, Accuracy, Precision, Recall, and F1-score.
+**Data Visualizations:**
+  * Churn distribution across demographics & services
+  * Churn by contract type, internet service, payment method
+  * Feature correlation heatmap
+  * Feature importance from Decision Tree
 
-* Data Visualizations:
- * Churn rate comparison across categories (contract type, internet service, etc.).
- * Distribution plots and bar charts to highlight churn trends.
----
 ## 🛠️ Tools & Technologies
-* Programming Language: Python
-* Libraries: Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
-* Environment: Jupyter Notebook
+  * **Programming Language:** Python
+  * **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Plotly, Scikit-learn
+  * **Environment:** Jupyter Notebook
 ---
 ## 📂 Repository Structure
   
 ```
 📁 Churn-Analysis
 
+│
 ├── data/  
-│   ├── raw/                
+│   └── raw/                
 │
-├── 📄 Churn_Analysis.ipynb      # Jupyter notebook with full analysis 
+├── 📄 Churn_Analysis.ipynb       # Jupyter notebook with full analysis 
 │
-├── 📊 images/                   # Visualizations (churn by city, heatmaps, etc.
+├── 📊 images/                    # Visualizations
 │   ├── churn_by_city.png  
 │   ├── churn_by_contract.png  
 │   ├── correlation_heatmap.png  
 │   ├── tenure_segmentation.png  
 │   ├── decision_tree_importance.png  
-│   ├──  Decision.PNG
-│   ├── churn_by_city.PNG
-│   ├── churn_by_city_hover.PNG
-│   ├── churn_by_contract.PNG
-│   ├── churn_by_partner.PNG
-│   ├── churn_count_for_DSL_internet_service.PNG
-│   ├── churn_count_for_fiber_optic_service.PNG
-│   ├── churn_count_for_internet_service.PNG
-│   ├── churn_count_for_no_internet_service.PNG
-│   ├── churn_count_for_online_security.PNG
-│   ├── churn_count_for_tech_support.PNG
-│   ├── churn_count_payment_method.PNG
-│   ├── churn_distribution_by_dependents.PNG
-│   ├── churn_rate_gender.PNG
-│   ├── churn_rate_not_senior_citizen_status.PNG
-│   ├── churn_rate_reason.PNG
-│   ├── churn_rate_senior_citizen_status.PNG
-│   ├── churn_reason_count_dependents.PNG
-│   ├── churn_reason_count_not_dependents.PNG
-│   ├── churn_reason_count_partner.PNG
-│   ├── churn_reason_not_senior_citizen_status.PNG
-│   ├── churn_reason_senior.PNG
-│   ├── correlation_heatmap.PNG
-│   └──  decision_confusion.PNG
+│   ├── decision_confusion.PNG  
+│   ├── churn_rate_reason.PNG  
+│   └── … (other churn plots)
 │
 ├── scripts/                # Python scripts for reusable functions  
-│   ├── data_preprocessing.py  
-│   ├── visualization_utils.py  
-│   └── modeling.py  
 │
-├── 📄 README.md                 # Project documentation (this file) 
-└── requirements.txt  
+└── 📄 README.md                 # Project documentation (this file)  
 ```
 ---
 ## 🔍 Analysis Highlights
 ### 1. Data Cleaning & Preprocessing
-- Removed duplicates, missing values, and irrelevant columns
+- Removed duplicates if any, missing or null values, and removed irrelevant columns
 - Encoded categorical variables for machine learning
 - Engineered new features such as **tenure bins** for segmentation
 
 ### 2. Exploratory Data Analysis (EDA)
 Analyzed churn patterns across multiple dimensions:
+
 - **Contract Type**: Month-to-month customers churn the most
 - **Tenure Groups**: Short-tenure customers are high-risk
-- **Charges**: Higher charges show correlation with churn
-- **Demographics**: Gender, Partner, Dependents
-- **Services**: Tech Support, Online Security
-- **Payment Method**: Electronic check users churn more
+- **Charges**: Higher charges correlate with higher churn probability
+- **Demographics**: Non Senior citizens, customers without partners/dependents, and female gender churn more
+- **Services**: Customers without Tech Support/Online Security churn more
+- **Payment Method**: Electronic check users churn more frequently
 - **Customer Lifetime Value (CLV)**
-- **Correlation Heatmap** for feature relationships
+- **Correlation Heatmap** shows relationships across numeric features
 
 ### 3. Visualizations
 Key plots saved in `/images/`:
@@ -111,28 +99,32 @@ Key plots saved in `/images/`:
 - Churn by partner/dependent status
 - Service usage vs. churn (Online Security, Tech Support, etc.)
 - Payment method vs. churn
-- Feature correlation heatmap
-- Model feature importance ranking
+- Correlation heatmap
+- Feature importance from Decision Tree
 
 ### 4. Machine Learning Model
 - **Model**: Decision Tree Classifier  
 - **Metrics**: Accuracy = 77%, with Precision, Recall, and F1-score  
 - **Evaluation**: Confusion Matrix and Feature Importance plots
 
-### 5. Business Insights
-- Month-to-month contract customers are most likely to churn  
-- Customers without online security or tech support show higher churn rates  
-- Short-tenure customers are a high-risk segment  
-- Certain payment methods (e.g., electronic checks) are linked to higher churn  
-
+### 📈 Business Insights
+- **Month-to-month contracts** → highest churn risk  
+- **Short-tenure customers** → over 75% of churned users were young, high-risk profiles  
+- **Competitors** → 1/3 churned due to better offers and devices  
+- **Support Issues** → poor customer service cited frequently as a churn driver  
+- **Demographics** → 64% churners had no partner, seniors churned mostly due to competitors and service attitude .
 ---
 Key factors driving churn: Contract type, tenure, internet service, payment method.
 ![](images/Decision.PNG)
-## 📈 Results & Insights
-* Customers on month-to-month contracts showed the highest churn rate.
-* Electronic check payments were strongly associated with churn compared to automatic bank transfers or credit card payments.
-* Tenure plays a big role: customers with shorter tenures are more likely to churn.
-* Logistic Regression achieved a good baseline accuracy, while decision tree analysis revealed the most influential features.
+
+---
+## Business Recommendation
+  1. **Early-life onboarding** (first 60 days): guided setup, “first-value” checklist, proactive support ticket on day 7/21; measure 90-day churn.
+  2. **Contract migration offers:** targeted discounts to move month-to-month to 12–24 months; A/B test incentive levels
+  3. **Service bundling:** bundle Online Security/Tech Support with modest discount; cross-sell in-app nudges to low-tenure users.
+  4. **Payment method nudges:** encourage autopay/credit-card enrollment to reduce friction (email + in-app; highlight benefits).
+  5. **Risk-based outreach:** apply the Decision Tree model weekly to generate a high-risk customer list for personalized outreach.
+     
 ---
  ## How to Run the Project
 ```
@@ -141,11 +133,13 @@ cd Customer_churn_Analysis
 pip install -r requirements.txt
 jupyter notebook Churn_Analysis.ipynb
 ```
-or open it in Google Colab for an interactive experience.
+or open it in **Google Colab** for an interactive experience.
  
 ---
 # 👤 Author
-👋 Hi, I'm Peter Junior Nwachineke – a passionate Data Analyst with hands-on experience in SQL, Power BI, Excel, and Python. I'm currently pursuing an MBA in International Business Management at ISTEC and building data projects that turn raw information into actionable insights. I'm especially interested in process automation, dashboard reporting, and helping businesses make smarter, data-driven decisions.
+👋 Hi, I'm Peter Junior Nwachineke – a passionate Data Analyst with hands-on experience in SQL, Power BI, Excel, and Python. I’m currently pursuing an MBA in International Business Management at ISTEC and building data projects that turn raw information into actionable insights.
+
+I specialize in process automation, dashboard reporting, and churn/retention analytics, with the goal of helping businesses make smarter, data-driven decisions.
 
 📧 [Email](peter.j.nwachineke@gmail.com)
 
